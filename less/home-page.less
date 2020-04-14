@@ -3,6 +3,9 @@
   max-width:800px;
   margin: 0 auto;
   margin-bottom: 2%;
+  @media (max-width:500px){
+    padding: 0 4%;
+}
   img{
     margin-bottom: 2%;
   }
@@ -18,20 +21,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media(max-width: 500px){
+      flex-direction: column;
+      align-items: center;
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media(max-width: 500px){
+        width:100%;
+        justify-content: center;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media(max-width:500px){
+        width: 100%;
+        padding-left: 0;
+      }
       img {
         border-radius: 10px;
+        @media(max-width: 500px){
+          width:100%;
+        }
       }
     }
   }
@@ -39,6 +55,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media(max-width:500px){
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -54,6 +74,9 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media (max-width: 500px){
+      width:100%;
+    }
 
     img {
       border-radius: 10px;
@@ -65,12 +88,24 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 500px){
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media (max-width: 500px){
+        width:100%;
+        padding:3% 10%;
+      }
       .btn{
         .coolbutton(white,#008080);
+        @media (max-width:500px){
+          width:100%;
+          font-size: 1.25rem;
+        }
       }
     }
   }
